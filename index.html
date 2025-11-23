@@ -1,34 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Laser Tripwire Security System</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Laser Tripwire Security System — precision intrusion detection for home and business." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
   <header class="hero">
     <h1>Laser Tripwire Security System</h1>
-    <p>Advanced, affordable, and reliable intrusion detection for your home or office.</p>
-    <nav class="landing-nav">
+    <p>Precision laser detection, audible & visual alerts — compact, reliable, and easy to install.</p>
+    <nav class="landing-nav" aria-label="Main navigation">
       <a href="about.html" class="cta-btn">About</a>
       <a href="features.html" class="cta-btn">Features</a>
       <a href="demo.html" class="cta-btn">Demo</a>
       <a href="purchase.html" class="cta-btn">Purchase/Contact</a>
+      <a href="support.html" class="cta-btn">support</a>
     </nav>
   </header>
-  <section class="section">
-    <img src="laser-demo.png" alt="Laser Tripwire Demo" class="about-img">
-    <h2>Protect What Matters Most</h2>
-    <p>
-      Discover a new level of security with our Laser Tripwire System. Using advanced laser and sensor technology, our system instantly detects intrusions and alerts you with visual and audible alarms. Simple to install, cost-effective, and perfect for any environment.
-    </p>
-    <div>
-      <a href="purchase.html" class="cta-btn">Get Yours Now</a>
-    </div>
-  </section>
+
+  <main>
+    <section class="section" style="text-align:center;">
+      <img src="laser-demo.png" alt="Laser Tripwire Demo" class="about-img" style="margin-bottom:1.5rem;">
+      <h2>Protect What Matters Most</h2>
+      <p style="max-width:760px;margin:1rem auto;color:#fff;">
+        Our Laser Tripwire Security System detects beam interruptions with millisecond precision and triggers both audible and visual alerts. Designed for doorways, corridors, display cases, server racks and other sensitive areas.
+      </p>
+      <p style="max-width:760px;margin:0.5rem auto;color:#fff;">
+        Integrated camera monitoring: when the laser beam is broken the system captures a photo and securely sends it to the owner's device (phone or email), providing instant visual verification alongside the audible/visual alerts.
+      </p>
+      <div style="margin-top:1.5rem;">
+        <a href="purchase.html" class="cta-btn">Get Yours Now</a>
+        <a href="demo.html" class="cta-btn" style="margin-left:.6rem;background:#111;color:#ff2323;border:2px solid #ff2323;">See Demo</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why choose our system?</h2>
+      <ul style="max-width:900px;margin:0 auto;color:#fff;">
+        <li>Fast detection with low false alarms.</li>
+        <li>Simple installation — small footprint and adjustable mounts.</li>
+        <li>Clear visual status indicator for responders.</li>
+        <li>Integrated camera captures an image when the beam is interrupted and delivers it to your device for immediate verification.</li>
+        <li>Affordable: pro kits available.</li>
+      </ul>
+    </section>
+
+    <!-- Datasheet / Download -->
+    <section class="section" aria-labelledby="datasheet-heading">
+      <h2 id="datasheet-heading">Datasheet</h2>
+      <p class="muted" style="max-width:900px;margin:0 auto;color:#ffb3b3;">
+        The full datasheet contains technical specifications, wiring diagrams, installation notes, safety recommendations and warranty details. Download the PDF for installers and procurement teams.
+      </p>
+      <div style="max-width:900px;margin:1rem auto;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+        <div style="flex:1;min-width:220px;">
+          <strong>Laser Tripwire Security System — Datasheet</strong>
+          <p class="muted" style="margin:0.25rem 0;color:#bfbfbf;">Includes detection range, power requirements, mechanical drawings and certification info.</p>
+        </div>
+        <div>
+          <a href="datasheet.pdf" class="cta-btn" download>Download datasheet (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Purchase & Support callout -->
+    <section class="section" aria-labelledby="purchase-heading">
+      <h2 id="purchase-heading">Purchase & Support</h2>
+      <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 340px;gap:1rem;">
+        <div>
+          <p style="color:#fff;">Visit the Purchase Page</a> to order kits, request quotes or view pricing for bulk purchases. For sales enquiries, use the contact form on the purchase page or email <a href="mailto:sales@example.com">sales@example.com</a>.</p>
+
+          <h3>Support requests</h3>
+          <p class="muted" style="color:#bfbfbf;">If you need technical support, configuration help, or custom integration, submit the support form below and our team will respond within one business day.</p>
+        </div>
+        <aside style="background:#111;padding:1rem;border-radius:10px;border:1px solid #ff2323;">
+            <p style="color:#fff;margin:0;">
+              <strong style="color:#ff2323;">For More Information About Purchase:</strong>
+              <span style="margin-left:.25rem;">Visit the <a href="purchase.html" class="cta-btn" style="display:inline-block;padding:.35rem .8rem;margin-left:.25rem;">Purchase Page</a> to order.</span>
+            </p>
+            <p style="color:#fff;margin:0;">
+              <strong style="color:#ff2323;"> For More Help About The System Aid :</strong>
+              <span style="margin-left:.25rem;">Visit the <a href="support.html" class="cta-btn" style="display:inline-block;padding:.35rem .8rem;margin-left:.25rem;">support Page</a> to order.</span>
+            </p>
+          <div style="height:8px;"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Feedback section (posts on-site via localStorage) -->
+    <section class="section" aria-labelledby="feedback-heading">
+      <h2 id="feedback-heading">Visitor feedback</h2>
+      <p class="muted" style="color:#eae7e7;">Leave feedback or a short testimonial. Submitted items appear publicly below (stored locally for demo). For production consider server-side moderation and storage.</p>
+
+      <form id="feedbackForm" style="max-width:900px;margin:0 auto 1rem auto;">
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <div style="flex:1;min-width:160px;">
+            <label for="fbName" style="display:block;color:#eae7e7;margin-bottom:.25rem;font-size:.95rem;">Name</label>
+            <input type="text" id="fbName" placeholder="Your name" required style="width:100%;background:#111;color:#fff;border:1px solid #333;padding:.5rem;border-radius:6px;">
+          </div>
+          <div style="display:flex;flex-direction:column;justify-content:center;">
+            <label for="fbRating" style="display:block;color:#eae7e7;margin-bottom:.25rem;font-size:.95rem;">Rating</label>
+            <div class="star-rating" role="radiogroup" aria-label="Rating" style="display:inline-flex;align-items:center;gap:0.15rem;">
+             <button type="button" class="star" data-value="1" aria-label="1 star" style="font-size:1.25rem;background:transparent;border:none;color:#ffb3b3;cursor:pointer;padding:.1rem;">☆</button>
+             <button type="button" class="star" data-value="2" aria-label="2 stars" style="font-size:1.25rem;background:transparent;border:none;color:#ffb3b3;cursor:pointer;padding:.1rem;">☆</button>
+             <button type="button" class="star" data-value="3" aria-label="3 stars" style="font-size:1.25rem;background:transparent;border:none;color:#ffb3b3;cursor:pointer;padding:.1rem;">☆</button>
+             <button type="button" class="star" data-value="4" aria-label="4 stars" style="font-size:1.25rem;background:transparent;border:none;color:#ffb3b3;cursor:pointer;padding:.1rem;">☆</button>
+             <button type="button" class="star" data-value="5" aria-label="5 stars" style="font-size:1.25rem;background:transparent;border:none;color:#ffb3b3;cursor:pointer;padding:.1rem;">☆</button>
+             <input type="hidden" id="fbRating" required value="5">
+            </div>
+          </div>
+         </div>
+        <label for="fbComment" style="display:block;color:#eae7e7;margin:0.5rem 0 .25rem 0;font-size:.95rem;">Feedback</label>
+        <textarea id="fbComment" rows="3" placeholder="Your feedback..." style="width:100%;margin-top:.25rem;background:#111;color:#fff;border:1px solid #333;padding:.5rem;border-radius:6px;resize:vertical;"></textarea>
+         <button type="submit" class="cta-btn" style="margin-top:.5rem;">Post feedback</button>
+         <div id="fbMsg" class="muted" style="display:none;margin-top:.5rem;color:#bfffbf;">Feedback posted.</div>
+       </form>
+
+      <div id="feedbackList" style="max-width:900px;margin:0 auto;display:grid;gap:0.75rem;"></div>
+    </section>
+  </main>
+
   <footer>
     <p>© 2025 Laser Tripwire Security System Project</p>
   </footer>
+
+  <script>
+    // Support form UX
+    (function () {
+      // Only attach support form UX if the form exists on the page
+      const supportForm = document.getElementById('supportForm');
+      if (!supportForm) return;
+      supportForm.addEventListener('submit', function (e) {
+        // UX only: show confirmation and allow actual POST to proceed
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { Accept: 'application/json' }
+        }).then(res => {
+          const successEl = document.getElementById('supportSuccess');
+          if (successEl) successEl.style.display = 'block';
+          form.reset();
+        }).catch(() => {
+          alert('Unable to send request. Please email support@example.com');
+        });
+      });
+    })();
+    
+    // Star-rating UI initializer
+    (function () {
+      const starContainer = document.querySelector('.star-rating');
+      if (!starContainer) return;
+      const stars = Array.from(starContainer.querySelectorAll('.star'));
+      const hidden = starContainer.querySelector('#fbRating');
+      function setRating(v) {
+        hidden.value = v;
+        stars.forEach(s => s.textContent = (parseInt(s.dataset.value, 10) <= v) ? '★' : '☆');
+      }
+      stars.forEach(s => {
+        s.addEventListener('click', () => setRating(parseInt(s.dataset.value, 10)));
+        s.addEventListener('mouseenter', () => {
+          const hoverVal = parseInt(s.dataset.value, 10);
+          stars.forEach(st => st.textContent = (parseInt(st.dataset.value, 10) <= hoverVal) ? '★' : '☆');
+        });
+        s.addEventListener('mouseleave', () => setRating(parseInt(hidden.value, 10) || 5));
+        s.setAttribute('tabindex', '0');
+        s.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { setRating(parseInt(s.dataset.value, 10)); e.preventDefault(); }
+          if (e.key === 'ArrowRight') { const next = s.nextElementSibling; if (next && next.classList.contains('star')) next.focus(); }
+          if (e.key === 'ArrowLeft') { const prev = s.previousElementSibling; if (prev && prev.classList.contains('star')) prev.focus(); }
+        });
+      });
+      // initialize display from hidden value (default 5)
+      setRating(parseInt(hidden.value, 10) || 5);
+    })();
+    
+    // Feedback: store in localStorage and render on page
+    (function () {
+      const STORAGE_KEY = 'lts_feedbacks_v1';
+      const fbForm = document.getElementById('feedbackForm');
+      const list = document.getElementById('feedbackList');
+      const fbMsg = document.getElementById('fbMsg');
+    
+      function load() {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        return raw ? JSON.parse(raw) : [];
+      }
+      function save(items) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+      }
+      function render() {
+        const items = load().reverse();
+        list.innerHTML = items.map(item => `
+          <div style="background:#111;border:1px solid #ff2323;padding:0.6rem;border-radius:8px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <strong style="color:#ff2323;">${escapeHtml(item.name)}</strong>
+              <span style="color:#bfbfbf;">${'★'.repeat(item.rating)}${'☆'.repeat(5-item.rating)}</span>
+            </div>
+            <p style="margin:.4rem 0;color:#bfbfbf;">${escapeHtml(item.comment)}</p>
+            <div style="font-size:.8rem;color:#7f7f7f;">${new Date(item.date).toLocaleString()}</div>
+          </div>
+        `).join('');
+      }
+      function escapeHtml(s){ return (s||'').replace(/[&<>"']/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m];}); }
+    
+      fbForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('fbName').value.trim() || 'Anonymous';
+        const rating = parseInt(document.getElementById('fbRating').value) || 5;
+        const comment = document.getElementById('fbComment').value.trim() || '';
+        const items = load();
+        items.push({ name, rating, comment, date: Date.now() });
+        save(items);
+        render();
+        fbForm.reset();
+        fbMsg.style.display = 'block';
+        setTimeout(()=> fbMsg.style.display = 'none', 2500);
+      });
+    
+      // initial render
+      render();
+    })();
+  </script>
 </body>
 </html>

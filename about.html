@@ -1,33 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About | Laser Tripwire Security System</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="About the Laser Tripwire Security System — how it works, design goals, and use cases." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
     <h1>Laser Tripwire Security System</h1>
-    <nav class="landing-nav">
+    <p class="muted">About the product, design goals and typical applications.</p>
+    <nav class="landing-nav" aria-label="Main navigation">
       <a href="index.html" class="cta-btn">Home</a>
       <a href="about.html" class="cta-btn">About</a>
       <a href="features.html" class="cta-btn">Features</a>
       <a href="demo.html" class="cta-btn">Demo</a>
       <a href="purchase.html" class="cta-btn">Purchase/Contact</a>
+       <a href="support.html" class="cta-btn">support</a>
     </nav>
   </header>
-  <section id="about" class="section">
-    <h2>About the System</h2>
-    <div class="about-content">
-      <img src="laser-demo.png" alt="Laser Tripwire Demo" class="about-img">
-      <p>
-        This innovative laser tripwire system uses a laser beam and a light sensor to detect motion or intrusion. 
-        When the beam is interrupted, it triggers an alarm with a flashing LED and a buzzer. 
-        Perfect for home, office, or project security.
+
+  <main>
+    <section class="section">
+      <h2>What it is</h2>
+      <p style="color:#fff;">
+        The Laser Tripwire Security System is a compact intrusion-detection kit that uses a visible laser emitter and an optical receiver. When the laser beam is interrupted, the receiver triggers a controlled alert sequence (audible buzzer + LED alarm) and a secondary status LED remains active to assist responders.
       </p>
-    </div>
-  </section>
+
+      <h3>Integrated camera monitoring</h3>
+      <p style="color:#fff;">
+        Each kit can include an integrated camera module that continuously monitors the protected area. When the laser beam is broken the system captures a timestamped photo (or short clip) and securely delivers it to the owner's device (phone or email). This provides immediate visual verification of the event and helps reduce false alarms.
+      </p>
+      <p class="muted">
+        Camera data is transmitted using secure transport; image delivery options include push notification to a mobile app, email with attachment, or upload to a private cloud endpoint. Local storage to an SD card is also supported for offline review.
+      </p>
+
+      <h3>Design goals</h3>
+      <ul style="color:#fff;">
+        <li>Reliable detection with minimal false positives.</li>
+        <li>Clear, attention-grabbing alerts.</li>
+        <li>Easy to mount and align — adjustable hardware included.</li>
+        <li>Low power consumption and flexible power options (5–12V DC).</li>
+        <li>Visual verification via integrated camera to improve situational awareness.</li>
+      </ul>
+
+      <h3>Typical use cases</h3>
+      <ul style="color:#fff;">
+        <li>Home entryways and garages</li>
+        <li>Retail displays and exhibitions</li>
+        <li>Server or equipment racks</li>
+        <li>Workshops, labs, and storage rooms</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Safety & compliance</h2>
+      <p class="muted">Our kits use low-power visible lasers within safe exposure limits for short-range use. Components are RoHS compliant. See the datasheet for more information and safety recommendations.</p>
+      <a href="datasheet.pdf" class="cta-btn">Download Datasheet</a>
+    </section>
+  </main>
+
   <footer>
     <p>© 2025 Laser Tripwire Security System Project</p>
   </footer>

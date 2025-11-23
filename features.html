@@ -1,54 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Features | Laser Tripwire Security System</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Features of the Laser Tripwire Security System — detection, alerts, configuration and options." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
     <h1>Laser Tripwire Security System</h1>
-    <nav class="landing-nav">
+    <p class="muted">Features and configurable options.</p>
+    <nav class="landing-nav" aria-label="Main navigation">
       <a href="index.html" class="cta-btn">Home</a>
       <a href="about.html" class="cta-btn">About</a>
       <a href="features.html" class="cta-btn">Features</a>
       <a href="demo.html" class="cta-btn">Demo</a>
       <a href="purchase.html" class="cta-btn">Purchase/Contact</a>
+      <a href="support.html" class="cta-btn">support</a>
     </nav>
   </header>
-  <section id="features" class="section">
-    <h2>Key Features</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <span class="feature-icon">🔒</span>
-        <h3>Laser Detection</h3>
-        <p>Instantly detects any interruption in the laser beam.</p>
+
+  <main>
+    <section class="section">
+      <h2>Key features</h2>
+      <style>
+        /* Feature click / modal styles (page-specific) */
+        .feature-card { cursor:pointer; outline: none; }
+        .feature-card:focus { box-shadow: 0 0 0 3px rgba(255,35,35,0.12); border-radius:8px; }
+        .feature-modal { position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.6); z-index:1200; padding:1rem; }
+        .feature-modal[aria-hidden="false"] { display:flex; }
+        .feature-modal .panel { background:#111; padding:1.25rem; max-width:720px; width:100%; border-radius:10px; border:1px solid rgba(255,35,35,0.06); color:#fff; }
+        .feature-modal .panel h3 { margin-top:0; color:#ff2323;}
+        .feature-modal .close-btn { background:transparent;border:0;color:#bfbfbf;font-size:1.1rem;cursor:pointer; float:right; }
+      </style>
+
+      <div class="features-grid" id="featuresGrid">
+        <div class="feature-card" role="button" tabindex="0" data-title="Precision detection" data-detail="A narrow-beam emitter and sensitive optical receiver detect even short interruptions. Sensitivity is adjustable in firmware so you can ignore small disturbances (insects, light flicker) while reliably catching real intrusions.">
+          <span class="feature-icon">🔒</span>
+          <h3>Precision detection</h3>
+          <p>Fast optical sensor with configurable sensitivity to reduce false alarms.</p>
+          <p><a href="precision-detection.html" class="muted" style="color:#ffb3b3;"></a></p>
+        </div>
+
+        <div class="feature-card" role="button" tabindex="0" data-title="Audible & visual alerts" data-detail="On detection the system triggers an audible buzzer and bright LED pattern. Alarm patterns and volume can be configured for indoor or outdoor environments, and alerts can be routed to external systems if needed.">
+          <span class="feature-icon">🔊</span>
+          <h3>Audible & visual alerts</h3>
+          <p>Programmable buzzer patterns and bright LED alarm for immediate notification.</p>
+          <p><a href="audible-visual.html" class="muted" style="color:#ffb3b3;"></a></p>
+        </div>
+
+        <div class="feature-card" role="button" tabindex="0" data-title="Integrated camera monitoring" data-detail="When the beam is broken the camera captures a short image or clip. Images may be stored locally or uploaded to an owner-specified endpoint for verification. Optional privacy mode prevents automatic uploads.">
+          <span class="feature-icon">📸</span>
+          <h3>Integrated camera monitoring</h3>
+          <p>On-beam-break the camera captures a photo (or short clip) and securely sends it to the owner's device for visual verification.</p>
+          <p><a href="camera-monitoring.html" class="muted" style="color:#ffb3b3;"></a></p>
+        </div>
+
+        <div class="feature-card" role="button" tabindex="0" data-title="Adjustable timing" data-detail="Alert duration, debounce time and re-arm delays are configurable in firmware (default: 10s). Adjust these to match location traffic: longer for busy areas to avoid repeat alerts, shorter for sensitive zones.">
+          <span class="feature-icon">⚙️</span>
+          <h3>Adjustable timing</h3>
+          <p>10s alert cycle by default; timing and blink rates can be customized in firmware.</p>
+          <p><a href="adjustable-timing.html" class="muted" style="color:#ffb3b3;"></a></p>
+        </div>
+
+        <div class="feature-card" role="button" tabindex="0" data-title="Flexible power" data-detail="The system runs from 5–12V DC and supports USB power banks, adapters or small battery packs. Low-power standby extends battery life for remote installations.">
+          <span class="feature-icon">🔋</span>
+          <h3>Flexible power</h3>
+          <p>Operates from 5V to 12V DC — supports USB power banks or small adapters.</p>
+          <p><a href="flexible-power.html" class="muted" style="color:#ffb3b3;"></a></p>
+        </div>
+
+        <div class="feature-card" role="button" tabindex="0" data-title="Mounting & alignment" data-detail="Adjustable aluminum mounts and simple alignment marks make aiming straightforward. Use the receiver's alignment indicator to confirm a clean beam before final tightening to reduce nuisance activations.">
+          <span class="feature-icon">🧰</span>
+          <h3>Mounting & alignment</h3>
+          <p>Aluminum adjustable mounts included for precise aim and stable installation.</p>
+          <p><a href="mounting-alignment.html" class="muted" style="color:#ffb3b3;"></a></p>
+        </div>
+
+        <div class="feature-card" role="button" tabindex="0" data-title="Documentation & support" data-detail="Every kit includes a quick-start guide, wiring diagrams and troubleshooting tips. Online documentation and email support are available for advanced or edge-case setups.">
+          <span class="feature-icon">🧾</span>
+          <h3>Documentation & support</h3>
+          <p>Quick-start guide, wiring diagrams, and email support included with every kit.</p>
+          <p><a href="documentation-support.html" class="muted" style="color:#ffb3b3;"></a></p>
+        </div>
       </div>
-      <div class="feature-card">
-        <span class="feature-icon">🔊</span>
-        <h3>Audible & Visual Alarms</h3>
-        <p>Flashing LED and buzzer alert you to intrusions.</p>
+
+      <!-- Modal used to show the explanation when a feature is clicked -->
+      <div id="featureModal" class="feature-modal" role="dialog" aria-hidden="true" aria-labelledby="featureModalTitle">
+        <div class="panel" role="document">
+          <button class="close-btn" id="featureModalClose" aria-label="Close">✕</button>
+          <h3 id="featureModalTitle"></h3>
+          <div id="featureModalBody" style="margin-top:.6rem;color:#bfbfbf;"></div>
+        </div>
       </div>
-      <div class="feature-card">
-        <span class="feature-icon">⏱️</span>
-        <h3>Timed Alerts</h3>
-        <p>10-second alert cycle with faster blinking at the end.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">💡</span>
-        <h3>Status Indicator</h3>
-        <p>Second LED stays on for 45 seconds as a signal.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">💰</span>
-        <h3>Cost Effective</h3>
-        <p>Simple, affordable, and easy to install.</p>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
+
   <footer>
     <p>© 2025 Laser Tripwire Security System Project</p>
   </footer>
+
+  <script>
+    (function () {
+      const modal = document.getElementById('featureModal');
+      const titleEl = document.getElementById('featureModalTitle');
+      const bodyEl = document.getElementById('featureModalBody');
+      const closeBtn = document.getElementById('featureModalClose');
+
+      function openModal(title, text) {
+        titleEl.textContent = title;
+        bodyEl.textContent = text;
+        modal.setAttribute('aria-hidden', 'false');
+        // trap focus simply by focusing close button
+        closeBtn.focus();
+        document.addEventListener('keydown', handleKey);
+      }
+
+      function closeModal() {
+        modal.setAttribute('aria-hidden', 'true');
+        document.removeEventListener('keydown', handleKey);
+      }
+
+      function handleKey(e) {
+        if (e.key === 'Escape') closeModal();
+      }
+
+      // click outside the panel closes
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeModal();
+      });
+      closeBtn.addEventListener('click', closeModal);
+
+      // attach to every feature card
+      document.querySelectorAll('.feature-card').forEach(card => {
+        const title = card.dataset.title || card.querySelector('h3')?.textContent || '';
+        const detail = card.dataset.detail || '';
+        card.addEventListener('click', () => openModal(title, detail));
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(title, detail); }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

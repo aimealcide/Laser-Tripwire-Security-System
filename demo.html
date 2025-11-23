@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Demo | Laser Tripwire Security System</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Interactive demo and demonstration media for the Laser Tripwire Security System." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
     <h1>Laser Tripwire Security System</h1>
-    <nav class="landing-nav">
+    <p class="muted">Live demo, diagrams and expected behavior.</p>
+    <nav class="landing-nav" aria-label="Main navigation">
       <a href="index.html" class="cta-btn">Home</a>
       <a href="about.html" class="cta-btn">About</a>
       <a href="features.html" class="cta-btn">Features</a>
       <a href="demo.html" class="cta-btn">Demo</a>
       <a href="purchase.html" class="cta-btn">Purchase/Contact</a>
+      <a href="support.html" class="cta-btn">support</a>
     </nav>
   </header>
-  <section id="demo" class="section">
-    <h2>System Demo</h2>
-    <p>See how the system responds in real-time when the laser beam is crossed:</p>
-    <ul class="demo-list">
-      <li>🔔 The buzzer and LED blink for 10 seconds</li>
-      <li>⚡ They blink faster in the last 5 seconds</li>
-      <li>💡 A second LED remains on for 45 seconds as a signal</li>
-    </ul>
-    <img src="system-diagram.png" alt="System Diagram" class="demo-img">
-  </section>
+
+  <main>
+    <section class="section">
+      <h2>System behaviour</h2>
+      <ul class="demo-list">
+        <li>When the beam is interrupted the buzzer and primary LED begin a 10s alert cycle.</li>
+        <li>Alert blink-rate increases in the final 5 seconds to draw attention.</li>
+        <li>Secondary LED remains on for 45 seconds as a persistent status indicator.</li>
+      </ul>
+
+      <h3>Demo media</h3>
+      <p class="muted">Below are images and a short demo video showing alignment and alarm response.</p>
+      <img src="system-diagram.png" alt="System diagram" class="demo-img" style="max-width:680px;margin:1rem 0;">
+      <p style="color:#fff;">(Replace with an uploaded demo video file or embed from a secure hosting service.)</p>
+    </section>
+
+    <section class="section">
+      <h2>How to test safely</h2>
+      <ol style="color:#fff;">
+        <li>Power the kit from a 5V USB adapter or 9V adapter as required.</li>
+        <li>Mount emitter and receiver on stable surfaces and align the beam.</li>
+        <li>Walk through the beam to verify alert sequence and status LED behavior.</li>
+      </ol>
+    </section>
+  </main>
+
   <footer>
     <p>© 2025 Laser Tripwire Security System Project</p>
   </footer>

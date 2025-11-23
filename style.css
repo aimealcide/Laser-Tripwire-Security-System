@@ -10,7 +10,7 @@ body {
 
 header, .hero {
   background: linear-gradient(120deg, #1a1a1a 60%, #ff2323 100%);
-  color: #fff;
+  color: #ffffff;
   padding: 3rem 1rem 2rem 1rem;
   text-align: center;
 }
@@ -30,7 +30,7 @@ h1, h2, h3 {
 button,
 .cta-btn {
   background: #ff2323;             /* Security red buttons */
-  color: #fff;
+  color: #fcfcfc;
   border: none;
   cursor: pointer;
   border-radius: 25px;
@@ -105,7 +105,7 @@ button:hover,
 .demo-list li {
   margin-bottom: 0.7rem;
   font-size: 1.1rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 .contact-form input,
