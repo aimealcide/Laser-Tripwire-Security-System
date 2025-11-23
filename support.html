@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Support — Laser Tripwire</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Support</h1>
+    <p>Technical support, troubleshooting and integration help for the Laser Tripwire Security System.</p>
+    <nav class="landing-nav" aria-label="Main navigation">
+      <a href="index.html" class="cta-btn">Home</a>
+      <a href="about.html" class="cta-btn">About</a>
+      <a href="features.html" class="cta-btn">Features</a>
+      <a href="purchase.html" class="cta-btn">Purchase</a>
+      <a href="support.html" class="cta-btn">Support</a>
+    </nav>
+  </header>
+
+  <main class="section" style="max-width:900px;margin:1rem auto;">
+    <h2>Submit a support request</h2>
+    <p class="muted">Provide device serial, firmware version, steps to reproduce and screenshots if available.</p>
+
+    <form id="supportForm" class="contact-form" action="https://formspree.io/f/mqaqvqaz" method="POST" style="margin-top:1rem;">
+      <label style="display:block;margin-bottom:.25rem;color:#ff2323;">Name *</label>
+      <input type="text" name="name" required placeholder="Your name">
+
+      <label style="display:block;margin:.5rem 0 .25rem;color:#ff2323;">Email *</label>
+      <input type="email" name="_replyto" required placeholder="you@example.com">
+
+      <label style="display:block;margin:.5rem 0 .25rem;color:#ff2323;">Issue type</label>
+      <select name="issue" required>
+        <option value="">Select…</option>
+        <option>Installation</option>
+        <option>Hardware</option>
+        <option>Firmware / Software</option>
+        <option>Integration / API</option>
+        <option>Other</option>
+      </select>
+
+      <label style="display:block;margin:.5rem 0 .25rem;color:#ff2323;">Description *</label>
+      <textarea name="message" rows="6" required placeholder="Describe the issue"></textarea>
+
+      <input type="hidden" name="_subject" value="Support request — Laser Tripwire">
+      <button type="submit" class="cta-btn" style="margin-top:.6rem;">Send support request</button>
+      <div id="supportSuccess" class="muted" role="status" style="display:none;margin-top:.6rem;color:#bfffbf;">Support request sent. We will contact you shortly.</div>
+    </form>
+
+    <section style="margin-top:1.5rem;">
+      <h3>Other support resources</h3>
+      <ul>
+        <li>Email: <a href="mailto:support@example.com">support@example.com</a></li>
+        <li>Docs: <a href="docs.html">Product docs</a></li>
+        <li>Firmware: <a href="firmware/">Firmware</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Laser Tripwire Security System Project</p>
+  </footer>
+
+  <script>
+    document.getElementById('supportForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      fetch(form.action, { method: form.method, body: data, headers: { Accept: 'application/json' }})
+        .then(() => {
+          document.getElementById('supportSuccess').style.display = 'block';
+          form.reset();
+        })
+        .catch(() => {
+          alert('Unable to send request. Please email support@example.com');
+        });
+    });
+  </script>
+</body>
+</html>
